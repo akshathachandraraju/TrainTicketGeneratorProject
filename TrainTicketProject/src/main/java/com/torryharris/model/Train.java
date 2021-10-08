@@ -14,19 +14,7 @@ public class Train {
     private String destination;
     private double ticket_price;
 
-    @Override
-    public String toString() {
-        return "Train{" +
-                "train_no=" + train_no +
-                ", train_name='" + train_name + '\'' +
-                ", source1='" + source1 + '\'' +
-                ", destination='" + destination + '\'' +
-                ", ticket_price=" + ticket_price +
-                '}';
-    }
-
     public Train(Integer train_no, String train_name, String source1, String destination, double ticket_price) {
-        super();
         this.train_no = train_no;
         this.train_name = train_name;
         this.source1 = source1;
@@ -72,14 +60,22 @@ public class Train {
     }
 
     public double getTicket_price() {
-
         return ticket_price;
     }
 
     public void setTicket_price(double ticket_price) {
         this.ticket_price = ticket_price;
     }
-
+@Override
+    public String toString() {
+        return "Train{" +
+                "train_no=" + train_no +
+                ", train_name='" + train_name + '\'' +
+                ", source1='" + source1 + '\'' +
+                ", destination='" + destination + '\'' +
+                ", ticket_price=" + ticket_price +
+                '}';
     }
+}
 
 
