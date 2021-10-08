@@ -19,16 +19,6 @@ public class Ticket {
     private Train train;
     private TreeMap<Passenger,Integer>passengerTreeMap=new TreeMap<>();
 
-
-/*
-    public Ticket(String pnr, String travel_date, Train train, TreeMap<Passenger, Integer> passengerTreeMap) {
-        this.pnr = pnr;
-        this.travel_date = travel_date;
-        this.train = train;
-        this.passengerTreeMap = passengerTreeMap;
-    }
-public Ticket(){
-}*/
 public Ticket(LocalDate travel_date,Train train) {
     LocalDate today=LocalDate.now();
     boolean flag1=today.isBefore(travel_date);
@@ -135,7 +125,6 @@ public Ticket() {
     public void writeTicket() throws IOException {
         String str=generateTicket().toString();
         String filename=generatePNR()+".txt";
-        counter++;
         FileOutputStream fos=new FileOutputStream(filename);
         PrintWriter pr=new PrintWriter(fos);
         pr.write(str);
