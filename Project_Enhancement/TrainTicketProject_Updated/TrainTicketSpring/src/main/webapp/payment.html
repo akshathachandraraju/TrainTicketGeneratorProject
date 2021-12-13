@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href=main.css>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="main">
+            <form action="success.jsp">
+                    <h3>Payment</h3>
+                        <label >Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                <center>
+                <div class="row">
+                        <label >Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Name" required>
+                </div>
+                <div class="row">
+                        <label >Credit card number</label>
+                        <input id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"  required>
+                </div>
+                <div class="row">
+                        <label >Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="Month"  required>
+                </div>
+                        <div class="row">
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="YYYY"  required>
+                            </div>
+                            <div class="row">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                            </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label><br>
+                <input type="submit" value="Pay" class="btn">
+                    <a href="index.html"><button class="btn">Generate Another Ticket</button></a>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
